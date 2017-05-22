@@ -78,8 +78,6 @@ void sendFloat_number( double n);
 void Position_Lcd(unsigned char x, unsigned char y);
 void Lcd_Print( char* format,...);
 void start_from_beginning();
-void Lcd_newLine();
-void Lcd_clearScreen();
 //''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 //Section of the macros
 //''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''

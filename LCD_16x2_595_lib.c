@@ -182,21 +182,21 @@ void send_number(unsigned long n) {
 	int len = 0;
 	int j = 0,r = 0;
 	if(val == 0){
-	   Lcd_595_send_character(val + '0');
+		Lcd_595_send_character(val + '0');
 	}
 	else{
-        while(val!=0) {
-             r = val%10;
-            arr[len] = r;
-            val = val/10;
-            len++;
-        }
-        for( j=(len-1);j>=0;j--) {
-            Lcd_595_send_character(arr[j]+'0');
-        }
-	}
+		while(val!=0) {
+			 r = val%10;
+			arr[len] = r;
+			val = val/10;
+			len++;
+		}
+		for( j=(len-1);j>=0;j--) {
+			Lcd_595_send_character(arr[j]+'0');
+		}
+    }
 }
-//  END OF FILE
+//  ENF OF FILE
 //''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 //to print string
 void sendAstring(char *ch)
@@ -279,14 +279,4 @@ void Lcd_Print( char* format,...){
 	    }
 	va_end(arg);
 
-}
-
-void Lcd_newLine(void) {
-    Lcd_595_Cmd(0xC0);
-    l = 17;
-}
-
-void Lcd_clearScreen(void) {
-    Lcd_595_Cmd(0x01);
-    l = 0;
 }
